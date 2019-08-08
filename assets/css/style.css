@@ -14,3 +14,14 @@ div, form, input {
 .my-gif {
     margin: 10px;
 }
+
+.rating-text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.final-gif {
+    float: left;
+}

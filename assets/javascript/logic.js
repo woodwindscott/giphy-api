@@ -49,8 +49,18 @@ function displayGiphy() {
         for (var i = 0; i < results.length; i++) {
             console.log(results[i]);
 
+            var resultDiv = $("<div>");
+            resultDiv.addClass("final-gif");
+
             // generating an new variable to hold the URL to the image
             var imageUrl = results[i].images.fixed_height_still.url;
+
+            // creates the rating display
+            var ratingP = $("<p>");
+            ratingP.addClass("rating-text");
+            var newCSS = results[i].images.fixed_height_still.width;
+            ratingP.css({"width:": newCSS});
+            ratingP.text("Rating: " + results[i].rating);
 
             // creates an image tag
             var myImage = $("<img>");
@@ -64,8 +74,9 @@ function displayGiphy() {
             myImage.attr("src", imageUrl);
             myImage.attr("alt", "my image");
 
+            resultDiv.append(ratingP, myImage);
             // Adds new images to the top left of the screen
-            $("#topics-view").append(myImage);
+            $("#topics-view").append(resultDiv);
         }
 
         $(".my-gif").on("click", function() {
