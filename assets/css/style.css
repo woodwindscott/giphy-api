@@ -25,3 +25,8 @@ div, form, input {
 .final-gif {
     float: left;
 }
+
+.btn {
+    background-color: #4aaaa5;
+    color: white;
+}

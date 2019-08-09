@@ -4,32 +4,46 @@
 <head>
   <meta charset="utf-8">
   <title>Giphy API Homework</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <!-- Topics will get dumped here -->
-    <div id="buttons-view"></div>
+        <!-- Topics will get dumped here -->
+        <div id="buttons-view"></div>
 
-    <form id="topic-form">
-      <label for="topic-input">Add an animal</label>
-      <input type="text" id="topic-input"><br>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-4">
+                <div class="card text-center">
 
-      <!-- Button triggers new movie to be added -->
-      <input id="add-topic" type="submit" value="Submit">
-    </form>
+                    <!-- Form for submitting new topics -->
+                    <form>
+                        <div class="form-group">
+                            <label for="topic-input"><h5>Add an animal</h5></label>
+                            <input type="text" class="form-control" id="topic-input" placeholder="Add an animal">
+                        </div>
+                        <button type="submit" class="btn" id="add-topic">Submit</button>
+                    </form>
 
-    <!-- Giphy results will Get Dumped Here -->
-    <div id="topics-view">
+                </div>       
+            </div>           
+        </div>
+
+        <div class="row">
+
+            <!-- Giphy results will Get Dumped Here -->
+            <div id="topics-view">
+            </div>
+ 
+        </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
- 
- </div>
 
 </body>
 
